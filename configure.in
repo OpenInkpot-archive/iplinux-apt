@@ -74,12 +74,12 @@ AC_CHECK_HEADER(db.h,
 
 LIBS="$saveLIBS"
 
-AC_CHECK_LIB(curl, curl_easy_init,
-     [AC_CHECK_HEADER(curl/curl.h,
-        curl_ok=yes,
-        curl_ok=no)],
-     AC_MSG_ERROR([failed: I need CURL due https support]),
-)
+#AC_CHECK_LIB(curl, curl_easy_init,
+#     [AC_CHECK_HEADER(curl/curl.h,
+#        curl_ok=yes,
+#        curl_ok=no)],
+#     AC_MSG_ERROR([failed: I need CURL due https support]),
+#)
 
 AC_SUBST(BDBLIB)
 

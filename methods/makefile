@@ -52,12 +52,12 @@ LIB_MAKES = apt-pkg/makefile
 SOURCE = http.cc rfc2553emu.cc connect.cc
 include $(PROGRAM_H)
 
-# The https method
-PROGRAM=https
-SLIBS = -lapt-pkg -lcurl
-LIB_MAKES = apt-pkg/makefile
-SOURCE = https.cc
-include $(PROGRAM_H)
+## The https method
+#PROGRAM=https
+#SLIBS = -lapt-pkg -lcurl
+#LIB_MAKES = apt-pkg/makefile
+#SOURCE = https.cc
+#include $(PROGRAM_H)
 
 # The ftp method
 PROGRAM=ftp

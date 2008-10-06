@@ -10,30 +10,8 @@
 
 set -e
 
-create_apt_conf ()
-{
- EXAMPLE_SOURCE=/usr/share/doc/apt/examples/sources.list
- if [ -f $EXAMPLE_SOURCE ]; then
-     cp $EXAMPLE_SOURCE /etc/apt/sources.list
- fi
-}
- 
-check_apt_conf ()
-{
- true
- # this is for future expansion
-}
-
 #DEBHELPER#
 
 case "$1" in
        configure)
-	       #
-               # If there is no /etc/apt/sources.list then create a default
-	       #
-	       if [ ! -f /etc/apt/sources.list ]; then
-	         create_apt_conf
-	       else
-	         check_apt_conf
-	       fi
 esac
