@@ -3,8 +3,8 @@ Section: core
 Priority: important
 Maintainer: Yauhen Kharuzhy <jekhor@gmail.com>
 Standards-Version: 3.7.2.2
-Build-Depends: debhelper (>= 5.0), libdb-dev, gettext (>= 0.12), libcurl4-gnutls-dev | libcurl3-gnutls-dev (>= 7.15.5), debiandoc-sgml, docbook-utils (>= 0.6.12-1)
-XCS-Cross-Host-Build-Depends: debhelper (>= 5.0), gettext (>= 0.12), debiandoc-sgml, docbook-utils (>= 0.6.12-1)
+Build-Depends: debhelper (>= 5.0), libdb-dev, gettext (>= 0.12), libcurl4-gnutls-dev | libcurl3-gnutls-dev (>= 7.15.5), debiandoc-sgml, docbook-utils (>= 0.6.12-1), autoconf
+XCS-Cross-Host-Build-Depends: debhelper (>= 5.0), gettext (>= 0.12), debiandoc-sgml, docbook-utils (>= 0.6.12-1), autoconf
 XCS-Cross-Build-Depends: cross-toolchain
 
 Package: apt
