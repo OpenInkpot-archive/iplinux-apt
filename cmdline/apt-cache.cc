@@ -1272,7 +1272,7 @@ bool DisplayRecord(pkgCache::VerIterator V)
 									/*}}}*/
 // Search - Perform a search						/*{{{*/
 // ---------------------------------------------------------------------
-/* This searches the package names and pacakge descriptions for a pattern */
+/* This searches the package names and package descriptions for a pattern */
 struct ExDescFile
 {
    pkgCache::DescFile *Df;
@@ -1739,8 +1739,8 @@ bool ShowHelp(CommandLine &Cmd)
       "   show - Show a readable record for the package\n"
       "   depends - Show raw dependency information for a package\n"
       "   rdepends - Show reverse dependency information for a package\n"
-      "   pkgnames - List the names of all packages\n"
-      "   dotty - Generate package graphs for GraphVis\n"
+      "   pkgnames - List the names of all packages in the system\n"
+      "   dotty - Generate package graphs for GraphViz\n"
       "   xvcg - Generate package graphs for xvcg\n"
       "   policy - Show policy settings\n"
       "\n"

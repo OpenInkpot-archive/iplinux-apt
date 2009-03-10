@@ -122,8 +122,8 @@ build/build-doc-stamp: build/configure-stamp
 clean:
 	dh_testdir
 #	dh_testroot
-	-$(MAKE) clean
-	-$(MAKE) distclean
+	[ -f Makefile ] && $(MAKE) clean
+	[ -f Makefile ] && $(MAKE) distclean
 
 	rm -rf build
 
@@ -169,6 +169,9 @@ apt: build debian/shlibs.local
 #	cp debian/apt.conf.autoremove debian/$@/etc/apt/apt.conf.d/01autoremove
 	cp debian/apt.conf debian/$@/etc/apt/apt.conf
 #	head -n 500 ChangeLog > debian/ChangeLog
+
+	# copy lintian override
+	cp share/lintian-overrides debian/$@/usr/share/lintian/overrides/apt
 
 	# make rosetta happy and remove pot files in po/ (but leave stuff
 	# in po/domains/* untouched) and cp *.po into each domain dir

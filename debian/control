@@ -2,7 +2,7 @@ Source: apt
 Section: core
 Priority: important
 Maintainer: Mikhail Gusarov <dottedmag@dottedmag.net>
-Standards-Version: 3.7.2.2
+Standards-Version: 3.8.0
 Build-Depends: debhelper (>= 5.0), libdb-dev, gettext (>= 0.12), libcurl4-gnutls-dev | libcurl3-gnutls-dev (>= 7.15.5), debiandoc-sgml, docbook-utils (>= 0.6.12-1), autoconf
 XCS-Cross-Host-Build-Depends: debhelper (>= 5.0), gettext (>= 0.12), debiandoc-sgml, docbook-utils (>= 0.6.12-1), autoconf
 XCS-Cross-Build-Depends: cross-toolchain
@@ -20,7 +20,7 @@ Description: Advanced front-end for dpkg
 Package: libapt-pkg-dev
 Architecture: any
 Priority: optional
-Depends: apt (= ${Source-Version}), apt-utils (= ${Source-Version}), ${libapt-pkg:provides}, ${libapt-inst:provides}
+Depends: apt (= ${binary:Version}), apt-utils (= ${binary:Version}), ${libapt-pkg:provides}, ${libapt-inst:provides}
 Section: libdevel
 Description: Development files for APT's libapt-pkg and libapt-inst
  This package contains the header files and libraries for
