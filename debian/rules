@@ -171,7 +171,7 @@ apt: build debian/shlibs.local
 #	head -n 500 ChangeLog > debian/ChangeLog
 
 	# copy lintian override
-	cp share/lintian-overrides debian/$@/usr/share/lintian/overrides/apt
+#	cp share/lintian-overrides debian/$@/usr/share/lintian/overrides/apt
 
 	# make rosetta happy and remove pot files in po/ (but leave stuff
 	# in po/domains/* untouched) and cp *.po into each domain dir
