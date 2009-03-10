@@ -444,8 +444,9 @@ bool pkgAcquire::Clean(string Dir)
 	 unlink(Dir->d_name);
    };
    
-   chdir(StartDir.c_str());
    closedir(D);
+   if (chdir(StartDir.c_str()) != 0)
+      return _error->Errno("chdir",_("Unable to change to %s"),StartDir.c_str());
    return true;   
 }
 									/*}}}*/
@@ -796,7 +797,7 @@ bool pkgAcquireStatus::Pulse(pkgAcquire *Owner)
    // Compute the CPS
    struct timeval NewTime;
    gettimeofday(&NewTime,0);
-   if (NewTime.tv_sec - Time.tv_sec == 6 && NewTime.tv_usec > Time.tv_usec ||
+   if ((NewTime.tv_sec - Time.tv_sec == 6 && NewTime.tv_usec > Time.tv_usec) ||
        NewTime.tv_sec - Time.tv_sec > 6)
    {    
       double Delta = NewTime.tv_sec - Time.tv_sec + 
