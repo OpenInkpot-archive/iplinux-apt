@@ -1,3 +1,11 @@
+apt (0.7.15-1.ip2) asimov; urgency=low
+
+  * Re-enabled gpgv method.
+  * Added dependency to gpgv.
+  * Cleaned up Replaces/Conflicts fields.
+
+ -- Mikhail Gusarov <dottedmag@dottedmag.net>  Tue, 10 Mar 2009 16:04:43 +0600
+
 apt (0.7.15-1.ip1) asimov; urgency=low
 
   * First build for IPlinux.
