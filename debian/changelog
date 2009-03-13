@@ -1,3 +1,9 @@
+apt (0.7.20.2-1.ip2) asimov; urgency=low
+
+  * Oops. apt.conf has been shipped with Architecture "armel" inside.
+
+ -- Mikhail Gusarov <dottedmag@dottedmag.net>  Sat, 14 Mar 2009 03:31:16 +0600
+
 apt (0.7.20.2-1.ip1) asimov; urgency=low
 
   * New version for IPlinux.
