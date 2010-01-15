@@ -145,6 +145,7 @@ apt: build debian/shlibs.local
 # apt install
 #
 	cp $(BLD)/bin/apt-* debian/$@/usr/bin/
+	rm debian/$@/usr/bin/apt-mark
 
 	# Remove the bits that are in apt-utils
 	rm -f $(addprefix debian/$@/usr/bin/apt-,$(APT_UTILS))
