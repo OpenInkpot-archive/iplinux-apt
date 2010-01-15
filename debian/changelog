@@ -1,3 +1,9 @@
+apt (0.7.20.2-1.ip3) zelazny; urgency=low
+
+  * Disable apt-mark(1) due to pythonness.
+
+ -- Mikhail Gusarov <dottedmag@dottedmag.net>  Fri, 15 Jan 2010 15:40:37 +0600
+
 apt (0.7.20.2-1.ip2+b1) asimov; urgency=low
 
   * Rebuild with new toolchain.
