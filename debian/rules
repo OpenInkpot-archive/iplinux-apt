@@ -158,7 +158,7 @@ apt: build debian/shlibs.local
 	cp $(BLD)/bin/methods/* debian/$@/usr/lib/apt/methods/
 	# https has its own package
 #	rm debian/$@/usr/lib/apt/methods/https
-	for m in cdrom copy file ftp rred rsh ssh; do rm -f debian/$@/usr/lib/apt/methods/$$m; done
+	for m in cdrom ftp rred rsh ssh; do rm -f debian/$@/usr/lib/apt/methods/$$m; done
 
 #	cp $(BLD)/scripts/dselect/* debian/$@/usr/lib/dpkg/methods/apt/
 #	cp -r $(BLD)/locale debian/$@/usr/share/
