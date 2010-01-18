@@ -135,7 +135,7 @@ binary-indep:
 
 # Build architecture-dependent files here.
 
-binary-arch: apt libapt-pkg-dev
+binary-arch: apt
 apt: build debian/shlibs.local
 	dh_testdir -p$@
 	dh_testroot -p$@
@@ -194,35 +194,6 @@ apt: build debian/shlibs.local
 	dh_md5sums -p$@
 	dh_builddeb -p$@
 
-libapt-pkg-dev: build debian/shlibs.local
-	dh_testdir -p$@
-	dh_testroot -p$@
-	dh_clean -p$@ -k
-	dh_installdirs -p$@
-#
-# libapt-pkg-dev install
-#
-	cp -a $(BLD)/bin/libapt-pkg*.so debian/libapt-pkg-dev/usr/lib/
-	cp -a $(BLD)/bin/libapt-inst*.so debian/libapt-pkg-dev/usr/lib/
-#	ln -s libapt-pkg.so.$(LIBAPTPKG_MAJOR) debian/libapt-pkg-dev/usr/lib/libapt-pkg.so
-	cp $(BLD)/include/apt-pkg/*.h debian/libapt-pkg-dev/usr/include/apt-pkg/
-
-#	dh_installdocs -p$@
-#	dh_installmenu -p$@
-#	dh_installinit -p$@
-#	dh_installcron -p$@
-#	dh_installman -p$@
-
-#	dh_installchangelogs -p$@
-	dh_strip -p$@
-	dh_compress -p$@
-	dh_fixperms -p$@
-#	dh_suidregister -p$@
-	dh_installdeb -p$@
-	dh_gencontrol -p$@ -u -Vlibapt-pkg:provides=$(LIBAPTPKG_PROVIDE) -Vlibapt-inst:provides=$(LIBAPTINST_PROVIDE)
-	dh_md5sums -p$@
-	dh_builddeb -p$@
-
 apt-utils: build debian/shlibs.local
 	dh_testdir -p$@
 	dh_testroot -p$@
@@ -251,7 +222,7 @@ apt-utils: build debian/shlibs.local
 	dh_md5sums -p$@
 	dh_builddeb -p$@
 
-apt-transport-https: build debian/shlibs.local libapt-pkg-dev
+apt-transport-https: build debian/shlibs.local
 	dh_testdir -p$@
 	dh_testroot -p$@
 	dh_clean -p$@ -k
