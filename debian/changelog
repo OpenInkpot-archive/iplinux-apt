@@ -1,3 +1,9 @@
+apt (0.7.20.2-1.ip4) zelazny; urgency=low
+
+  * Re-enable file:/// URIs (OI#290)
+
+ -- Mikhail Gusarov <dottedmag@dottedmag.net>  Mon, 18 Jan 2010 10:32:46 +0600
+
 apt (0.7.20.2-1.ip3) zelazny; urgency=low
 
   * Disable apt-mark(1) due to pythonness.
